@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Discord App Redirect",
+  "version": "1.0.0",
+  "description": "Opens discord.com channel links and invites in the Discord desktop app instead of a browser tab.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "discord-app-redirect@v1tharr"
+    }
+  },
+  "permissions": [
+    "tabs",
+    "webRequest",
+    "webRequestBlocking",
+    "*://*.discord.com/*",
+    "*://*.discordapp.com/*",
+    "*://discord.gg/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
