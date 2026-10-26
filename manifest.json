@@ -5,7 +5,11 @@
   "description": "Opens discord.com channel links and invites in the Discord desktop app instead of a browser tab.",
   "browser_specific_settings": {
     "gecko": {
-      "id": "discord-app-redirect@v1tharr"
+      "id": "discord-app-redirect@v1tharr",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
     }
   },
   "permissions": [
