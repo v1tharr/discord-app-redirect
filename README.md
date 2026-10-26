@@ -16,14 +16,28 @@ the empty tab.
 
 ## Install
 
-Temporary, for testing: `about:debugging` -> This Firefox -> Load Temporary
-Add-on -> pick `manifest.json`.
-
-Permanent: release Firefox only runs signed extensions, so either submit it to
-addons.mozilla.org (unlisted is fine) or use Developer Edition / Nightly with
-`xpinstall.signatures.required` set to `false`.
+Download the signed `.xpi` from the
+[latest release](https://github.com/v1tharr/discord-app-redirect/releases/latest)
+and open it in Firefox: drag it into the window, or `about:addons` -> gear icon
+-> Install Add-on From File. Needs Firefox 140 or newer.
 
 The first time, Firefox asks whether to open Discord. Tick "always allow".
+
+### Signing your own copy
+
+Release Firefox only runs signed extensions. If you fork this, change the `id`
+in `manifest.json` (an ID can only be signed by one account), zip
+`manifest.json` and `background.js` with both files at the root of the archive,
+and upload it to addons.mozilla.org as a self-distributed add-on. Automatic
+signing usually takes a few minutes.
+
+Developer Edition and Nightly can skip signing: set
+`xpinstall.signatures.required` to `false` in `about:config`.
+
+### Testing
+
+`about:debugging` -> This Firefox -> Load Temporary Add-on -> pick
+`manifest.json`. Firefox drops it when it closes.
 
 ## Behaviour
 
